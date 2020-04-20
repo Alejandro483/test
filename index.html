@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadtrip!</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css"/>
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar text-black"
+      >
+        <div class="container">
+          <a id="text-nav" class="navbar-brand" href="/index.html"
+            ><strong>Road Trip</strong></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent-7"
+            aria-controls="navbarSupportedContent-7"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a id="nav-h" class="nav-link" href="/index.html"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="nav-t" class="nav-link" href="/assets/profile.html"
+                  >Team</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="nav-a" class="nav-link" href="/assets/app.html">App</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="showcase">
+        <div class="mask rgba-black-light align-items-center">
+          <div class="row"></div>
+          <br />
+          <div id="T1">
+            <h1><strong>Road Trip</strong></h1>
+            <hr class="hr-light my-4 wow fadeInDown" />
+            <h5><strong>Changing the way you go places</strong></h5>
+          </div>
+          <div class="flex-container">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="artist">Preferred Artist</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="artist"
+                  placeholder="artist"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Starting Point">I'm leaving from...</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="startingPoint"
+                  placeholder="latitude, longitude"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Starting Point">I'm headed to...</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="endPoint"
+                  placeholder="latitude, longitude"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary" id="submit-button">
+            Get Playlist!
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Your Playlist!</h3>
+      </div>
+
+      <div class="col-md-4">
+        <div id="trip-duration">
+          (where the duration for the trip will appear)
+        </div>
+        <br />
+        <div id="playlist-duration">
+          (where the duration for the playlist will appear)
+        </div>
+      </div>
+
+      <div id="playlist-div">
+        (this is where the playlist that's generated will appear)
+      </div>
+      <script src="/Java.js"></script>
+    </div>
+  </body>
+</html>
